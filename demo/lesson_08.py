@@ -4,7 +4,9 @@
     高级特性
         切片
         迭代 使用for循环时，只要作用于一个可迭代对象，for循环就可以正常运行
+        列表生成式
 """
+import os
 from collections import Iterable
 
 # 切片
@@ -90,3 +92,40 @@ for index, value in enumerate(['a', 'v', 'c']):
 
 for x, y in [(1, 1), (2, 4), (3, 9)]:
     print(x, y)
+
+
+# 列表生成式
+print(list(range(1, 11)))
+
+L = [x * x for x in range(1, 11)]
+print(L)
+
+# 删选偶数的平方
+L = [x * x for x in range(1, 11) if x % 2 == 0]
+print(L)
+
+# 两层循环，可以生成全排列
+L = [m + n for m in 'ABC' for n in '123']
+print(L)
+
+# for x in '123':
+#     print(isinstance(x, int))
+#     print(isinstance(x, str))
+
+files = [d for d in os.listdir('.')]  # os.listdir可以列出文件和目录
+print(files)
+
+d = {'x': 'A', 'y': 'B', 'z': 'C'}
+for k, v in d.items():
+    print('k = %s' % k, 'v = %s' % v)
+
+L = [k + '=' + v for k, v in d.items()]
+print(L)
+
+L = ['Hello', 'World', 'IBM', 'Apple']
+print([s.lower() for s in L])
+
+
+L = ['Hello', 'World', 18, 'Apple', None]
+
+print([s.lower() for s in L if isinstance(s, str)])
