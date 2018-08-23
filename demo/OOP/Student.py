@@ -15,7 +15,14 @@ class Student(object):
 
 
 stu1 = Student('zs', 20)
+# Python允许对实例变量绑定任何数据
+stu1.age = 100
 stu1.print_score()
+print(stu1.age)
+
 
 stu2 = Student('ls', 40)
 stu2.print_score()
+
+print(stu1)
+print(Student)
