@@ -15,7 +15,7 @@
 #     if f:
 #         f.close()
 
-# 简便操作
+# 简便操作 不必调用f.close()方法。
 # with open('demo/IO/hello.py', 'r') as f:
 #     print(f.read())
 
