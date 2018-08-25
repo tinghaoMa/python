@@ -1,7 +1,7 @@
 #!/user/bin/python3
 #  -*- coding: utf-8 -*-
 """
-
+    文件和文件夹的系列操作
 """
 import os
 import shutil
@@ -42,7 +42,24 @@ os.rename('demo/resources/1.txt', 'demo/resources/newName.txt')
 
 
 # 文件的拷贝
-shutil.copyfile('demo/resources/newName.txt', 'demo/resources/newNameCopy.txt')
+# shutil.copyfile('demo/resources/newName.txt',
+#                'demo/resources/newNameCopy.txt')
 
 # 移动文件
-shutil.move('demo/resources/newNameCopy.txt', 'demo/resources/destDir')
+# shutil.move('demo/resources/newNameCopy.txt', 'demo/resources/destDir')
+
+# print(os.listdir('/Users/itck_mth/study/python/demo'))
+# print(os.path.isdir('./demo/OOP'))
+# print(os.path.isfile('./demo/base/lesson_01.py'))
+# 列出当前目录下的所有目录
+print([x for x in os.listdir('.') if os.path.isdir(x)])
+
+path = '/Users/itck_mth/study/python/demo/IO/'
+#
+# for x in os.listdir(path):
+#     print(x)
+#     print(os.path.splitext(x))
+
+# 列出路径下面已‘.py’结尾的文件
+print([x for x in os.listdir(path) if os.path.isfile(
+    os.path.join('demo/IO', x))and os.path.splitext(x)[1] == '.py'])
