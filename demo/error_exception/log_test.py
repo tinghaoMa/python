@@ -1,10 +1,9 @@
-
 # -*- coding:utf-8 -*-
 import logging
 
 # 配置日志信息
 logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+                    format='%(asctime)s%(name)-12s%(levelname)-8s%(message)s',
                     datefmt='%m-%d %H:%M',
                     filename='demo/error_exception/myapp.log',
                     filemode='w')
