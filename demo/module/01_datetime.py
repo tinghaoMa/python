@@ -44,7 +44,8 @@ now = datetime.now()
 print(now.strftime('%a, %b %d %H:%M'))
 
 # datetime加减 需要导入timedelta
-# days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0
+# days=0, seconds=0, microseconds=0,
+# milliseconds=0, minutes=0, hours=0, weeks=0
 print('----日期加减---')
 now = datetime.now()
 print(now)
