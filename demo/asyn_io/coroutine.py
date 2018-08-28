@@ -39,6 +39,7 @@ def produce(c):
     c.send(None)  # 启动生成器
     n = 0
     while n < 5:
+        n = n + 1
         print('[Producer] Producing %s....' % n)
         r = c.send(n)
         print('[Producer] Consumer return %s...' % r)
